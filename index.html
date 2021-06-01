@@ -9,15 +9,16 @@
   <body>
     <script> 
       
-      var prom1 = prompt("Enter the principal amount without currency symbols.");
-      var prom2 = prompt("Enter the rate of interest (without the % sign).");
-      var prom3 = prompt("Enter the total time in years (but without any words. No fractions, only decimals.)");
+      var prom1 = prompt("Enter the initial principal balance (without any currency symbols).");
+      var prom2 = prompt("Enter the interest rate or the rate of interest (without the % symbol).");
+      var prom3 = prompt("Enter the number of times interest was applied/compounded per time period.");
+      var prom4 = prompt("Enter the number of time periods elapsed.");
+     
+      var ci = prom1*Math.pow((1+prom2/prom3),(prom3*prom4));
       
-      var si = prom1*prom2*prom3/100;
       
-      
-      if(si !== NaN) {
-        alert("The simple interest on the amount with the respective values is : "+si);
+      if(ci !== NaN) {
+        alert("The compound interest on the amount with the respective values is : "+ci);
       }
       
       else {
